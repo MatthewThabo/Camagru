@@ -1,207 +1,181 @@
-body{font-family: Arial, Helvetica, sans-serif;
-	background-color: coral;  
+/* ------------------------
+Navigation bar starts here
+---------------------------*/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000d0;
 }
 
-.booth-capture-button {
-	display:block;
-	margin:10px 0;
-	padding:10px 20px;
-	background-color:cornflowerblue;
-	color:#fff;
-	text-align: center;
-	text-decoration: none;
+li {
+  float: left;
 }
 
-
-
-/*STYLE*/
-
-* {
-    margin: 0;
-    padding: 0;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-	background-color: coral;  
+li a:hover:not(.active) {
+  background-color: #111;
 }
 
-.booth-capture-button {
-	display:block;
-	margin:10px 0;
-	padding:10px 20px;
-	background-color:cornflowerblue;
-	color:#fff;
-	text-align: center;
-	text-decoration: none;
+.active {
+  background-color: #FF686B;
 }
 
-footer {
+/* --------------------------
+Navigation bar ends here
+----------------------------- */
+:root{
+    --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+    --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+}
+
+body{
+    background-color: darkkhaki;
+}
+
+h1{
+    color: #FF686B;
+    text-align: center;
+}
+h2{
+    color: #FF686B;
+    padding: 2em;
+}
+
+.hover-in-shadow{
+    position: relative;
+    z-index: 1;
+}
+.hover-in-shadow:hover{
+     box-shadow: var(--outer-shadow-0);
+}
+.hover-in-shadow:after{
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     transition: all 0.3s ease;
+     z-index: -1;
+}
+.hover-in-shadow:hover:after{
+    box-shadow: var(--inner-shadow);
+}
+
+/* .card {
+    background-color: #000000d0;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 1409px;
+    margin: 1em;
+    max-height: 1409px;
+} */
+
+#btn-1{
+    border-radius: 13px;
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 29px;
+    color: #FF686B;
+    background-color: darkkhaki;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    line-height: 1.5;
+    box-shadow: 0 1rem 1.25rem 0 rgb(255 215 0 / 50%),
+                0 -0.25rem 1.5rem rgb(189 183 107) inset,
+                0 0.75rem 0.5rem rgb(240 230 140 / 69%) inset;
+}
+#btn-1:after{
+    border-radius: 13px;
+}
+
+/* .flex-container{
+    display: flex;
+    background-color: #000000d0;
+    padding: 6em;
+}
+.flex-container > .box {
+    background-color: darkkhaki;
+    margin: 10px;
+    width: 250px;
+    height: 230px;
+    padding: 20px;
+    font-size: 30px;
+}
+.flex-container .one{
+
+} */
+.img-box{
+    padding: 15px;
+    border-radius: 5px;
+}
+.img-box #camera{
+    width: 100%;
+    border: 10px solid transparent;
+    border-radius: 5px;
+}
+.takesnap {
+display: flex;
+flex-direction: column;
+} 
+.booth_main {
+flex: 3;
+display: flex;
+padding: 0;
+}
+.webcam {
+flex: 3;
+display: flex;
+flex-direction: column;
+width: 45%;
+}
+.webcam_video {
+flex: 3;
+}
+.webcam_input {
+flex: 1;
+}
+
+.canvas {
+flex: 3;
+width: 45%;
+display: flex;
+flex-direction: column;
+}
+.canvas_snap {
+flex: 3;
+}
+.canvas_button {
+flex: 1;
+}
+
+.stickers{
+flex: 1;
+width: 10%;
+position: relative;
+padding: 5px;
+}
+
+ footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    background-color: purple;
+    width: 99%;
+    background-color: #000000d0;
     color: white;
-    text-align: center;
-}
-
-/*Dante*/
-
-.takesnap {
-    display: flex;
-}
-
-    .stickers
-    {
-        flex: 1;
-    }
-
-    .booth_main {
-        flex: 4;
-        display: flex;
-        position: absolute;
-        width: 80vw;
-        margin: 0;
-        padding: 0;
-    }
-
-        .webcam {
-            flex: 1;
-            display: flex;
-            width: 40vw;
-        }
-
-            .webcam_video {
-                flex: 4;
-            }
-
-            .webcam_input {
-                flex: 1;
-            }
-
-        .canvas {
-            flex: 1;
-            width: 40vw;
-            display: flex;
-        }
-
-            .canvas_snap {
-                flex: 4;
-            }
-
-            .canvas_button {
-                flex: 1;
-            }
-
-/*webcam*/
-.thumbnail {
-    width: 80px;
-    height: 80px;
-}
-
-#supImage {
-    position: absolute;
-    z-index: 1;
-}
-#superimg {
-    position: absolute;
-    z-index: 1;
-}
-
-
-#img_upload {
-    position: relative;
-    z-index: 0;
-}
-
-.img {
-    display: block;
-    margin: auto;
-    width: 320px;
-    -webkit-filter: grayscale(50%);
-    filter: grayscale(50%);
-    margin-bottom: 2px;
-    float: auto;
-}
-
-.btn {
-    display: block;
-    background-color: rgb(38, 0, 128);
-    color: white;
-    padding: 12px 16px;
-    font-size: 12px;
-    cursor: pointer;
-    width: 20%;
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    float: auto;
-}
-
-.btn1 {
-    display: block;
-    background-color: rgb(60, 0, 128);
-    color: white;
-    padding: 12px 16px;
-    font-size: 12px;
-    cursor: pointer;
-    width: 20%;
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    float: auto;
-}
-
-/*upload & webcam*/
-.thumbnail {
-    width: 80px;
-    height: 80px;
-}
-
-.cam{
-    position: relative;
-    /* top: 60px; */
-    /* margin-top: 60px; */
-}
-
-label > input + img {
-    cursor:pointer;
-    border:2px solid transparent;
-}
-label > input:checked + img {
-    border:2px solid green;
-}
-
-#superimg {
-    position: absolute;
-    z-index: 1;
-}
-
-#img_upload {
-    position: relative;
-    z-index: 0;
-}
-
-.booth-capture-button {
-    display: block;
-    /* margin: 10px 0; */
-    padding: 10px 20px;
-    background-color: #0099ff;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-}
-
-#frme {
-    border: 2px solid #0099ff;
-    background-color: #686868;
-    width: 640px;
-    height: 480px;
-    margin-left: 1px;
-}
-
-@media (max-width: 800px) {
-    canvas, video, #frme {
-        width:100%;
-    }
+    text-align : center;
+    color: #FF686B;
 }

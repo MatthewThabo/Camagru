@@ -15,8 +15,9 @@ try {
     // echo "Database created successfully";
     
     } catch(PDOException $e) {
-        // echo $sql . "Error: <br>" . $e->getMessage();
+        echo $sql . "Error: <br>" . $e->getMessage();
     }
+
 
     try {
         $conn = new PDO($DB_DSN, $DB_USER , $DB_PASSWORD);
@@ -25,8 +26,8 @@ try {
             `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
             `email` varchar(50) NOT NULL,
             `username` varchar(50) NOT NULL,
-            `pwd` varchar(255) NOT NULL,
-            `validated` VARCHAR(2) NOT NULL DEFAULT 'N'
+            `pwd` varchar(255) NOT NULL
+            -- `validated` VARCHAR(2) NOT NULL DEFAULT 'N'
           )";
         $conn->exec($sql);
         // echo "Users table created successfully";

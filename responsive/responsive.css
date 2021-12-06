@@ -1,0 +1,63 @@
+@media (max-width: 574px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 587px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 691px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 704px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 754px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 790px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 828px){
+    .card form a{
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 574px){
+    footer p em{
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 574px){
+    .takesnap .booth_main{
+        font-size: 15px;
+        font-weight: 700;
+        flex-direction: column;
+    }
+}
